@@ -1,0 +1,12 @@
+{
+  "name": "justflour-client",
+  "version": "1.0.0",
+  "description": "JustFlour Project Management Client",
+  "scripts": {
+    "start": "npx serve -s build -l 3000",
+    "build": "echo 'Static HTML - no build required'",
+    "test": "echo 'No client tests configured'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

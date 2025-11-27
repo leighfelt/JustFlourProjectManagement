@@ -1,0 +1,18 @@
+{
+  "name": "justflour-project-management",
+  "version": "1.0.0",
+  "description": "JustFlour Project Management System",
+  "scripts": {
+    "start": "cd server && npm start",
+    "dev": "cd server && npm run dev",
+    "test": "cd server && npm test",
+    "lint": "cd server && npm run lint",
+    "install:all": "cd server && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leighfelt/JustFlourProjectManagement.git"
+  },
+  "author": "",
+  "license": "MIT"
+}
