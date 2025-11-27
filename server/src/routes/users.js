@@ -15,7 +15,11 @@ const router = express.Router();
 
 /**
  * Middleware to simulate authentication
- * In production, this would verify JWT tokens
+ * 
+ * SECURITY NOTE: This is a demonstration implementation only.
+ * In production, this must be replaced with proper JWT token verification
+ * that validates and decodes signed tokens from a trusted authentication provider.
+ * Never trust user-supplied headers for authentication in production.
  */
 function authenticate(req, _res, next) {
   // Get user from header (simulated - in production use JWT)

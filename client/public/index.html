@@ -336,12 +336,21 @@
     let allUsers = [];
     let searchTimeout = null;
 
+    /**
+     * Get authentication headers for API requests.
+     * NOTE: This is a demonstration only. In production, use JWT tokens
+     * obtained from a secure authentication flow.
+     */
+    function getAuthHeaders() {
+      return {
+        'x-user-id': 'current-user-id'
+      };
+    }
+
     async function loadStats() {
       try {
         const response = await fetch(`${API_BASE}/users/stats`, {
-          headers: {
-            'x-user-id': 'current-user-id'
-          }
+          headers: getAuthHeaders()
         });
         const stats = await response.json();
         
@@ -360,9 +369,7 @@
           : `${API_BASE}/users`;
         
         const response = await fetch(url, {
-          headers: {
-            'x-user-id': 'current-user-id'
-          }
+          headers: getAuthHeaders()
         });
         allUsers = await response.json();
         renderUsers(allUsers);
